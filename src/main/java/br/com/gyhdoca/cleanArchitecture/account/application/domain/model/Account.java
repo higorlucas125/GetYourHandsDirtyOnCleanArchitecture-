@@ -1,20 +1,39 @@
-package br.com.gyhdoca.cleanArchitecture.account.domain;
+package br.com.gyhdoca.cleanArchitecture.account.application.domain.model;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Value;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Account {
 
-    @Getter private AccountId id;
-    @Getter private Money baselineBalance;
-    private ActivityWindow activityWindow;
+    private AccountId id;
+    @Getter  private Money baselineBalance;
+    @Getter private ActivityWindow activityWindow;
 
+
+    public static Account withoutId (
+            Money baselineBalance,
+            ActivityWindow activityWindow
+    ){
+        return new Account(null, baselineBalance, activityWindow);
+    }
+
+    public static Account withId (
+            AccountId accountId,
+            Money baselineBalance,
+            ActivityWindow activityWindow
+    ){
+        return new Account(accountId,baselineBalance,activityWindow);
+    }
+
+    public Optional<AccountId> getId(){
+        return Optional.ofNullable(this.id);
+    }
 
     public Money calculateBalance(){
         return Money.add(

@@ -31,4 +31,5 @@ public class ActivityJpaEntity {
 
     @Column
     private long amount;
+
 }

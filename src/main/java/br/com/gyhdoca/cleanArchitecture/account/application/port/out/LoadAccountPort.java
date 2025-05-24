@@ -1,7 +1,7 @@
 package br.com.gyhdoca.cleanArchitecture.account.application.port.out;
 
-import br.com.gyhdoca.cleanArchitecture.account.domain.Account;
-import br.com.gyhdoca.cleanArchitecture.account.domain.Account.AccountId;
+import br.com.gyhdoca.cleanArchitecture.account.application.domain.model.Account;
+import br.com.gyhdoca.cleanArchitecture.account.application.domain.model.Account.AccountId;
 
 import java.time.LocalDateTime;
 

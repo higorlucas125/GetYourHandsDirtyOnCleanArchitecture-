@@ -1,4 +1,4 @@
-package br.com.gyhdoca.cleanArchitecture.account.domain;
+package br.com.gyhdoca.cleanArchitecture.account.application.domain.model;
 
 import lombok.Getter;
 import lombok.NonNull;
