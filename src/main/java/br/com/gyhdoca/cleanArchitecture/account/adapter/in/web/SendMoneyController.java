@@ -17,7 +17,7 @@ public class SendMoneyController {
 
     private final SendMoneyUseCase sendMoneyUseCase;
 
-    @PostMapping(path = "/accounts/send/{sourceAccountId}/{targetAccountId}/{amount}")
+    @PostMapping(path = "/accounts/send/{sourceAccount}/{targetAccount}/{amount}")
     void sendMpney(
             @PathVariable("sourceAccount") Long sourceAccountId,
             @PathVariable("targetAccount") Long targetAccountId,
